@@ -1,0 +1,3 @@
+UInterpolationScheme/UInterpolationScheme.C
+
+LIB = $(FOAM_USER_LIBBIN)/libInterpolationU
