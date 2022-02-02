@@ -10,4 +10,6 @@ It seem that the interpolation scheme don't work properly and I can't find where
 
 The version of OpenFOAM used is OF v2012.
 
+Link of the paper (equation 44 & 45): https://onlinelibrary.wiley.com/doi/10.1002/fld.2709
+
 Programmer: https://github.com/Ramkumar47
