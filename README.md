@@ -7,3 +7,5 @@ with the k-e turbulence model.
 The code compile successfully, but when it use during a simulation the results are not affected by the scheme.
 
 It seem that the interpolation scheme don't work properly and I can't find where the issue is.
+
+The version of OpenFOAM used is OF v2012.
