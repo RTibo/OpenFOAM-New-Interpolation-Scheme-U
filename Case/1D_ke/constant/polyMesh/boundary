@@ -1,1 +1,75 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2012                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       polyBoundaryMesh;
+    location    "constant/polyMesh";
+    object      boundary;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
+6
+(
+    Inlet
+    {
+        type            cyclic;
+        inGroups        1(cyclic);
+        nFaces          150;
+        startFace       149;
+        matchTolerance  0.0001;
+        transform       unknown;
+        neighbourPatch  Outlet;
+    }
+    Outlet
+    {
+        type            cyclic;
+        inGroups        1(cyclic);
+        nFaces          150;
+        startFace       299;
+        matchTolerance  0.0001;
+        transform       unknown;
+        neighbourPatch  Inlet;
+    }
+    Bottom
+    {
+        type            wall;
+        inGroups        1(wall);
+        nFaces          1;
+        startFace       449;
+    }
+    Top
+    {
+        type            patch;
+        nFaces          1;
+        startFace       450;
+    }
+    Back
+    {
+        type            cyclic;
+        inGroups        1(cyclic);
+        nFaces          150;
+        startFace       451;
+        matchTolerance  0.0001;
+        transform       unknown;
+        neighbourPatch  Front;
+    }
+    Front
+    {
+        type            cyclic;
+        inGroups        1(cyclic);
+        nFaces          150;
+        startFace       601;
+        matchTolerance  0.0001;
+        transform       unknown;
+        neighbourPatch  Back;
+    }
+)
+
+// ************************************************************************* //
