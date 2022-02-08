@@ -50,8 +50,7 @@ runTimeModifiable yes;
 libs 
 (
   "atmosphericModels.so"
-  "libAll3Schemes.so"
-  //"libInterpolationU.so"
+  "libInterpolationU.so"
 );
 
 
