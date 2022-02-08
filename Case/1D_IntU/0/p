@@ -10,42 +10,35 @@ FoamFile
     version     2.0;
     format      ascii;
     class       volScalarField;
-    object      epsilon;
+    object      p;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-#include "IC/InternalE"
+dimensions [ 0 2 -2 0 0 0 0 ];
 
-dimensions [ 0 2 -3 0 0 0 0 ];
-
-internalField nonuniform $epsilonField;
+internalField uniform 0.0;
 
 boundaryField
 {
     Inlet
     {
-        type                 cyclic;
+        type		cyclic;
     }
 
     Outlet
     {
-        type 		     cyclic;
+        type		cyclic;
     }
 
     Bottom
     {
-        type			atmEpsilonWallFunction;
-        z0			uniform 0.000033474;
-        Cmu			0.09;
-        kappa			0.41;
-        value			uniform 0.01;
+        type 		zeroGradient;
     }
 
     Top
     {
 	type            uniformFixedValue;
-        uniformValue    7.14;
-        value           uniform 7.14;
+        uniformValue    constant 0;
     }
 
     Back
