@@ -31,6 +31,6 @@ Where,
 # 1D Case
 
 The goal of the interpolation scheme is to apply the interpolation calculation on the component 'u' of the velocity.
-That being said, the value 'Un' at the north of the cell 'Zn' is where the scheme should be apply. The folder 'Test Case' has two cases folder that include the results for each individual cases, and the results compiled in one tabulated file with graphs. The case '1D_ke' is the results obtain with the turbulence model k-epsilon alone and the case '1D_IntU' is the case where the interpolation scheme is apply. The mesh is a 1D mesh that include 150 cells in the 'Z' direction. 
+That being said, the value 'Un' at the north of the cell 'Zn' is where the scheme should be apply. The folder 'Case' has two cases folder that include the results for each individual cases, and the results compiled in one tabulated file with graphs. The case '1D_ke' is the results obtain with the turbulence model k-epsilon alone and the case '1D_IntU' is the case where the interpolation scheme is apply. The mesh is a 1D mesh that include 150 cells in the 'Z' direction. 
 
 ![image](https://user-images.githubusercontent.com/64756528/153982544-8ae44806-2e3b-4d31-804b-e795111eed10.png)
